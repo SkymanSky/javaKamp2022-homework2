@@ -3,40 +3,34 @@ package homework2;
 public class Main {
 
 	public static void main(String[] args) {
-		// Metodları Anlamak
-		sayiBulmaca();
-		sayiBulmaca();
-		sayiBulmaca();
-		sayiBulmaca();
+		// Parametreli Metodları Anlamak
+		String mesaj="Bugün hava çok güzel.";
+		String yeniMesaj=sehirVer();
+		System.out.println(yeniMesaj);
+		int sayi=topla(15,7);
+		System.out.println(sayi);
 
 	}
 	
-	public static void sayiBulmaca() {
-		int[] sayilar = new int[] {1,2,5,7,9,0};
-		int aranacak=5;
-		boolean varMi=false;
-
-		for (int sayi:sayilar) {
-			if(sayi==aranacak) {
-				varMi=true;
-				break;
-			}
-		}
-		
-		String mesaj="";
-		if (varMi) {
-			mesaj="Sayı mevcuttur: "+aranacak;
-			mesajVer(mesaj);
-		}else {
-			mesajVer("Sayı mevcut değildir: "+aranacak);
-		}
-		
+	public static void ekle() {
+		System.out.println("Eklendi.");
 		
 	}
 	
-	public static void mesajVer(String mesaj) {
-		System.out.println(mesaj);
-		
+	public static void sil() {
+		System.out.println("Silindi.");
+	}
+	
+	public static void guncelle() {
+		System.out.println("Güncellendi.");
+	}
+	
+	public static int topla(int sayi1,int sayi2) {
+		return sayi1+sayi2;
+	}
+	
+	public static String sehirVer() {
+		return "Ankara";
 	}
 
 }
